@@ -1,6 +1,7 @@
 using System.Drawing;
+using TagsCloudContainer.Interfaces;
 
-namespace TagsCloudVisualization;
+namespace TagsCloudContainer;
 
 public class SpiralPointDistributor : IPointDistributor
 {

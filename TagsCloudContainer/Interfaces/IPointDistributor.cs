@@ -1,6 +1,6 @@
 using System.Drawing;
 
-namespace TagsCloudVisualization;
+namespace TagsCloudContainer.Interfaces;
 
 public interface IPointDistributor
 {

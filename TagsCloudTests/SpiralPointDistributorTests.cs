@@ -1,7 +1,7 @@
 using System.Drawing;
 using FluentAssertions;
 using NUnit.Framework;
-using TagsCloudVisualization;
+using TagsCloudContainer;
 
 namespace TagsCloudTests;
 

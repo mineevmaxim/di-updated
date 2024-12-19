@@ -3,7 +3,7 @@ using SixLabors.ImageSharp.Drawing.Processing;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 
-namespace TagsCloudVisualization;
+namespace TagsCloudContainer;
 
 public class Visualizer
 {

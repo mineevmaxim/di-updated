@@ -2,7 +2,7 @@ using System.Drawing;
 using NUnit.Framework;
 using FluentAssertions;
 using NUnit.Framework.Interfaces;
-using TagsCloudVisualization;
+using TagsCloudContainer;
 
 namespace TagsCloudTests;
 
