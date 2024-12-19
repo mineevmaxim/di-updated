@@ -9,11 +9,11 @@ public class Visualizer
 {
     private readonly IEnumerable<RectangleF> rectangles;
 
-    public Visualizer(IEnumerable<System.Drawing.RectangleF> rectangles)
-        => this.rectangles = rectangles.Select(rect => new RectangleF(rect.X, rect.Y, rect.Width, rect.Height));
+    public Visualizer(IEnumerable<System.Drawing.RectangleF> rectangles) =>
+        this.rectangles = rectangles.Select(rect => new RectangleF(rect.X, rect.Y, rect.Width, rect.Height));
 
-    public Visualizer(IEnumerable<RectangleF> rectangles)
-        => this.rectangles = rectangles;
+    public Visualizer(IEnumerable<RectangleF> rectangles) =>
+        this.rectangles = rectangles;
 
     public void SaveVisualizationAsPng(string fileName)
     {

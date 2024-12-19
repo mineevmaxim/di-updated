@@ -26,11 +26,10 @@ public class SpiralPointDistributor : IPointDistributor
         var y = center.Y + radius * MathF.Sin(angle);
 
         angle += angleStep;
-        if (angle >= MathF.PI * 2 || radius == 0)
-        {
-            angle = 0;
-            radius += radiusStep;
-        }
+        if (!(angle >= MathF.PI * 2) && radius != 0)
+            return new PointF(x, y);
+        angle = 0;
+        radius += radiusStep;
 
         return new PointF(x, y);
     }

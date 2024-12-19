@@ -3,21 +3,16 @@ using TagsCloudContainer.Interfaces;
 
 namespace TagsCloudContainer;
 
-public class CircularCloudLayouter : ICloudLayouter
+public class CircularCloudLayouter(IPointDistributor distributor) : ICloudLayouter
 {
-    private readonly IPointDistributor distributor;
     private readonly List<RectangleF> rectangles = [];
-
-    public CircularCloudLayouter(IPointDistributor distributor)
-        => this.distributor = distributor;
 
     public RectangleF PutNextRectangle(SizeF rectangleSize)
     {
-        PointF point;
         RectangleF rect;
         do
         {
-            point = distributor.GetNextPoint();
+            var point = distributor.GetNextPoint();
             rect = RectangleFExtensions.GetRectangleFWithCenterIn(point, rectangleSize);
         } while (rectangles.Any(r => r.IntersectsWith(rect)));
 

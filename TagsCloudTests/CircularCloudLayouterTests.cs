@@ -53,7 +53,7 @@ public class CircularCloudLayouterTests
         for (var i = 0; i < 50; i++)
             rectangles.Add(layouter.PutNextRectangle(new SizeF(rnd.Next(10, 20), rnd.Next(10, 20))));
 
-        var expected = Math.Max(rectangles.Max(rect => rect.Width), rectangles.Max(rect => rect.Height));
+        var expected = 1.5f * Math.Max(rectangles.Max(rect => rect.Width), rectangles.Max(rect => rect.Height));
         var distances = rectangles
             .Select(rectangle => rectangles.Where(rect => rect != rectangle).Min(rect => rect.DistanceTo(rectangle)));
         foreach (var distance in distances)
